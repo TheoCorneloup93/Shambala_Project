@@ -1,0 +1,325 @@
+<!-- MAIN -->
+<link rel="shortcut icon" type="image/png" href="str_orb.png">
+<link rel="stylesheet" href="css/ShambalaSheet.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="Js/Jquery.js"></script>
+
+<div class="grid-container">
+
+  <!-- TITLE -->
+    <div class="titre" style="text-align: center;">
+      <h1>SHAMBALA - FICHE PERSONNAGE</h1>
+    </div>
+    
+  <!-- IMAGE -->
+    <div class="image">
+      <img src="img/logo2.jpg">
+    </div>
+    
+    <!-- INFO 1 -->
+    <div class="info1">
+        <div classe="section-small flex-center" style="height: 60px;">
+          <label>Nom :</label>
+          <input name="attr_character_name" type="text">
+          <br>        
+        </div>
+        <div class="section-small flex-center" style="height: 60px;">
+          <label>Origine :</label>
+          <select id="attr_origine" type="text" style="width:60%;">
+              <option id="start">Choix Race :</option>
+              <option value="img/ysgandianM_shadow_test.png">Ysgandien</option>
+              <option value="img/ysgandianF_shadow_test.png">Ysgandienne</option>
+              <option value="img/orc_shadow_test.png">Orc</option>
+          </select>
+          <br>                 
+        </div>
+        <div classe="section-small flex-center" style="height: 60px;">
+          <label>Profession :</label>
+          <input name="attr_profession" type="text">
+          <br>          
+        </div>
+    </div>  
+
+  <!-- INFO 2 -->
+    
+    <div class="info2">
+        <div classe="age flex-center" style="height: 60px;">
+          <label>Age :</label>
+          <input name="attr_nom" type="text">
+          <br>          
+        </div>
+        <div classe="section-small flex-center" style="height: 60px;">
+          <label>Expérience générale :</label>
+          <input name="attr_expG" type="text">          
+          <br>
+        </div>
+        <div classe="section-small flex-center" style="height: 60px;">
+          <label>Expérience Profession :</label>
+          <input name="attr_expP" type="text">          
+          <br>
+        </div>
+    </div>
+
+    <!-- STORY -->
+
+    <div class="story">
+      <div class="section-small flex-center">
+        <label>Histoire :</label>
+        <textarea name="attr_story" cols="60" rows="8"></textarea>
+      </div>
+    </div>
+
+    <!-- STATUS -->
+
+    <div class="status">
+        <table style="width: 170px;">
+          <tr>
+            <td><b>PV</b> <input type="text" class="form-control" id="pv"></td>
+            <td><b>En</b> <input type="text" class="form-control" id="en"></td>
+            <td><b>PC</b> <input type="text" class="form-control" id="pc"></td>
+          </tr>
+        </table>
+    </div> 
+    
+    <!-- STAT SECTION -->
+
+    <div class="stats">
+        <div class="stat-block flex-center">
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                    <td><div class="physique" name="attr_physique"><b>PHYSIQUE</b></div></td>
+                    <td><input name="attr_strenght" type="number"></td>
+                    <td><button name="roll_physique" type="roll" value="&{template:strenght} {{name=@{character_name}}} {{Jet=Physique}} {{stat=@{strenght}}} {{action=Bousculer, Porter, Intimidation, Resister...}} {{rollSTR=[[d100]]}}"></button></td>
+                    </tr>
+                    <tr>
+                    <td><div class="adresse"><b>ADRESSE</b></div></td>
+                    <td><input type="number" name="attr_dex">
+                    <td><button name="roll_adresse" type="roll" value="&{template:dexterity} {{name=@{character_name}}} {{Jet=Adresse}} {{stat=@{dex}}} {{action=Esquive, Escalade, Larcin, Viser...}} {{rollDEX=[[d100]]}}"></button></td>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td><div class="psychique"><b>PSYCHIQUE</b></div></td>
+                    <td><input type="number" name="attr_psy">
+                    <td><button name="roll_psychique" type="roll" value="&{template:mental} {{name=@{character_name}}} {{Jet=Psychique}} {{stat=@{psy}}} {{action=Analyse, Perception, Connaissance, Psychologie...}} {{rollPSY=[[d100]]}}"></button></td>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td><div class="volonte"><b>VOLONTE</b></div></td>
+                    <td><input type="number" name="attr_tough">
+                    <td><button name="roll_volonte" type="roll" value="&{template:mindness} {{name=@{character_name}}} {{Jet=Volonte}} {{stat=@{tough}}} {{action=Caractère, Discussion, Marchandage, Bouclier Magique...}} {{rollVOL=[[d100]]}}"></button></td>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td><div class="combat"><b>COMBAT</b></div></td>
+                    <td><input type="number" name="attr_fight">
+                    <td><button name="roll_combat" type="roll" value="&{template:fight} {{name=@{character_name}}} {{Jet=Combat}} {{stat=@{fight}}} {{weapon1=@{right_hand}}} {{weapon2=@{left_hand}}} {{rollCBT=[[d100]]}}"></button></td>
+                    </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- WEAPONS/ARMORS -->
+
+    <div class="head section">
+      <div class="section-small flex-center">
+          <button id="head">casque</button>
+          <textarea class="form-control" id="attr_head" style="display: none;"></textarea>
+      </div>
+    </div>
+
+    <div class="rightHand section">
+      <div class="section-small flex-center">
+          <button id="attr_arme">Arme main droite</button>
+          <textarea class="form-control" id="attr_right_hand" style="display: none;"></textarea>
+      </div>
+    </div>
+
+    <div class="foot section">
+      <div class="section-small flex-center">
+        <textarea class="form-control" name="foot"></textarea>
+      </div>
+    </div>
+
+    <div class="chest section">
+      <div class="section-small flex-center">
+        <textarea class="form-control" name="chest"></textarea>
+      </div>
+    </div>
+  
+    <div class="hand2 section">
+      <div class="section-small flex-center">
+        <textarea class="form-control" name="attr_left_hand"></textarea>
+      </div>
+    </div>
+
+  <!-- Central Picture -->
+    
+  <div class="shadow section" id="shadow">
+    <div class="section small flex-center">
+        <img src="img/ysgandianM_shadow.png" class="attr_shadow">
+    </div>
+</div>
+
+  <!-- gold -->
+
+    <div class="gold section">
+      <div class="section-small flex-center">
+        <input type="number" name="attr_gold">
+      </div>
+    </div>
+  
+  <!-- BAG -->
+
+    <div class="sac section flex-center">
+      <label>Sac :</label>
+      <textarea name="attr_sac"></textarea>
+    </div>
+
+    <!-- SKILLS -->
+
+    <div class="skills section">
+        <label>Compétence :</label>
+      <div class="section-small flex-center">
+        <input class="form-control" id="c1">
+        <p></p>
+        <input class="form-control" id="c2">
+        <p></p>
+        <input class="form-control" id="c3">
+      </div>
+    </div>
+
+    <!-- Psychology -->
+
+    <div class="attrait section">
+        <label>Attrait :</label>
+      <div class="section-small flex-center">
+        <input class="form-control" id="a1">
+        <p></p>
+        <input class="form-control" id="a2">
+        <p></p>
+        <input class="form-control" id="a3">
+      </div>
+    </div>
+</div>
+
+
+<!-- ROLL TEMPLATE 
+{{#rollLess() rollSTR}} ==> se place dans le roll template
+
+<rolltemplate class="sheet-rolltemplate-fight">
+    <div class="rolltemp">
+    <table>
+      <tbody>
+        <tr><th>{{name}}</th></tr>
+        <tr>
+            <td><span class="text">Epreuve de </span><b>{{Jet}}</b></td>
+        </tr>
+        <tr>
+            <td><span class="text">Stat : </span><i>{{stat}}</i></td>
+        </tr>
+        <tr>
+            <td><span class="text">Arme (main droite) : </span><i>{{weapon1}}</i></td>
+        </tr>
+        <tr>
+            <td><span class="text">Arme (main gauche) : </span><i>{{weapon2}}</i></td>
+        </tr>
+        <tr>
+            <td><span class="text">Resultat : </span><i>{{rollCBT}}</i></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-strenght">
+    <div class="rolltemp">
+    <table>
+      <tbody>
+        <tr><th>{{name}}</th></tr>
+        <tr>
+            <td><span class="text">Epreuve de </span><b>{{Jet}}</b></td>
+        </tr>
+        <tr>
+            <td><span class="text">Stat : </span><i>{{stat}}</i></td>
+        </tr>
+        <tr>
+            <td><span class="text">Actions possibles : </span><i><br>{{action}}</i></td>
+        </tr>
+        <tr>
+            <td><span class="text">Resultat : </span><i>{{rollSTR}}</i></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-dexterity">
+    <div class="rolltemp">
+    <table>
+      <tbody>
+        <tr><th>{{name}}</th></tr>
+        <tr>
+            <td><span class="text">Epreuve de </span><b>{{Jet}}</b></td>
+        </tr>
+        <tr>
+            <td><span class="text">Stat : </span><i>{{stat}}</i></td>
+        </tr>
+        <tr>
+            <td><span class="text">Actions possibles : </span><i><br>{{action}}</i></td>
+        </tr>
+        <tr>
+            <td><span class="text">Resultat : </span><i>{{rollDEX}}</i></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-mental">
+    <div class="rolltemp">
+    <table>
+      <tbody>
+        <tr><th>{{name}}</th></tr>
+        <tr>
+            <td><span class="text">Epreuve de </span><b>{{Jet}}</b></td>
+        </tr>
+        <tr>
+            <td><span class="text">Stat : </span><i>{{stat}}</i></td>
+        </tr>
+        <tr>
+            <td><span class="text">Actions possibles : </span><i><br>{{action}}</i></td>
+        </tr>
+        <tr>
+            <td><span class="text">Resultat : </span><i>{{rollPSY}}</i></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-mindness">
+    <div class="rolltemp">
+    <table>
+      <tbody>
+        <tr><th>{{name}}</th></tr>
+        <tr>
+            <td><span class="text">Epreuve de </span><b>{{Jet}}</b></td>
+        </tr>
+        <tr>
+            <td><span class="text">Stat : </span><i>{{stat}}</i></td>
+        </tr>
+        <tr>
+            <td><span class="text">Actions possibles : </span><br><i>{{action}}</i></td>
+        </tr>
+        <tr>
+            <td><span class="text">Resultat : </span><i>{{rollVOL}}</i></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+</rolltemplate>
+-->
+

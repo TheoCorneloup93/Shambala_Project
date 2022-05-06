@@ -1,0 +1,786 @@
+/****** SHEET TEMPLATE ******/
+
+.grid-container {
+  display: grid;
+  grid-template-columns:220px 215px 200px 215px;
+  grid-template-rows: 120px 200px 190px 80px 120px 120px 120px auto;
+  width:    850px; /* Defines the width and height of the sheet */
+  height:   1100px;
+  background-image: url("../img/background.png");
+  background-size: 850px 1100px; /* Sets the sheet border image to same size as sheet */
+  background-repeat: no-repeat
+}
+
+
+.titre {
+  grid-column: 1 / span 4;
+}
+
+.image {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.info1 {
+  grid-row: 2;
+  grid-column: 2 / span 2;    
+}
+
+.info2 {
+  grid-row: 2;
+  grid-column: 3 / span 2;
+}
+
+.story {
+  grid-row: 3;
+  grid-column: 1 / span 4;    
+}
+
+.status {
+  grid-row: 4;
+  grid-column: 1;
+}
+
+.stats {
+  grid-column: 1 / span 2;
+  grid-row: 5 / span 3;
+}
+
+.head {
+    grid-column: 2;
+    grid-row: 4 / span 2;
+}
+
+.rightHand {
+    grid-column: 2;
+    grid-row: 5 / span 2;
+}
+
+.foot {
+    grid-column: 2;
+    grid-row: 6 / span 2;
+}
+
+.chest {
+    grid-column: 3 / span 2;
+    grid-row: 4 / span 2;
+}
+
+.hand2 {
+    grid-column: 3 / span 2;
+    grid-row: 5 / span 2;   
+}
+
+.shadow {
+    grid-column: 2 / span 3;
+    grid-row: 5 / span 3;
+}
+
+.gold {
+    grid-column: 4;
+    grid-row: 6 / span 2;
+}
+
+.sac {
+    grid-column: 1 / span 2;
+    grid-row: 7 / span 2;
+}
+
+.skills {
+    grid-column: 3;
+    grid-row: 7 / span 2;
+}
+
+.attrait {
+    grid-column: 4;
+    grid-row: 7 / span 2;
+}
+
+
+/***** BUTTON *****/
+
+button[name="roll_physique"] {
+  background: url(https://www.hebergeur-image.com/upload/87.89.182.68-5fa26b0f19dcc.png);
+  -webkit-text-stroke: 0.5px red;
+}
+
+button[name="roll_adresse"] {
+  background: url(https://www.hebergeur-image.com/upload/87.89.182.68-5fa26b0f19dcc.png);
+  -webkit-text-stroke: 0.5px green;
+}
+
+button[name="roll_psychique"] {
+  background: url(https://www.hebergeur-image.com/upload/87.89.182.68-5fa26b0f19dcc.png);
+  -webkit-text-stroke: 0.5px purple;
+}
+
+button[name="roll_volonte"] {
+  background: url(https://www.hebergeur-image.com/upload/87.89.182.68-5fa26b0f19dcc.png);
+  -webkit-text-stroke: 0.5px blue;
+}
+
+button[name="roll_combat"] {
+  background: url(https://www.hebergeur-image.com/upload/87.89.182.68-5fa26b0f19dcc.png);
+  -webkit-text-stroke: 0.5px gray;
+}
+
+/***** INPUT *****/
+
+input[type=text], select {
+  display: block;
+  border: 1px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-style: none none solid none;
+}
+
+input[type=number] {
+  padding: 1px;
+  display: block;
+  border: 2px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-style: solid none solid none;
+  width: 50px;
+  text-align: center;
+}
+
+/***** DIV *****/
+
+
+div.titre {
+    margin-top: 10px;
+    font-family: 'Eagle Lake', cursive;
+}
+
+div.image {
+    margin-left: 50px;
+    height: 130px;
+}
+
+div.info1 {
+    margin-left: 30px;
+    width: 230px;
+    height: 180px;
+}
+
+div.info2 {
+    margin-left: 90px;
+    width: 70%;
+    height: 180px;
+}
+
+div.info2 input {
+    width: 80%;
+}
+
+div.story {
+  margin-left: 50px;
+}
+
+div.story textarea {
+  display: block;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-style: solid none solid none;
+  height: 170px;
+  width: 90%;
+}
+
+div.status {
+  margin-top: 20px;
+  margin-left: 50px;
+  height: 50px;
+}
+
+div.status input {
+  margin-top: 1px;
+  margin-left: 4px;
+}
+
+div.status table, td,
+div.status input {
+  text-align: center;
+  width: 50px;
+}
+
+div.stats {
+  margin-left: 30px;
+  font-size: 100%;
+  border-spacing: 50px;
+}
+
+div.stats td {
+    height: 40px;
+    padding: 4px;
+    font-size: 14px;
+}
+
+div.physique {
+  border: 1px solid solid;
+  background-image: url("../img/str_orb.png");
+  background-size: 40px 40px;
+  padding: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  -webkit-text-stroke: 0.5px black;
+}
+
+div.adresse {
+  border: 1px solid solid;
+  background-image: url("../img/dex_orb.png");
+  background-size: 40px 40px;
+  padding: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  -webkit-text-stroke: 0.5px black;
+}
+
+div.psychique {
+  border: 1px solid solid;
+  background-image: url("../img/int_orb.png");
+  background-size: 40px 40px;
+  padding: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  -webkit-text-stroke: 0.5px black;
+}
+
+div.volonte {
+  border: 1px solid solid;
+  background-image: url("../img/will_orb.png");
+  background-size: 40px 40px;
+  padding: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  -webkit-text-stroke: 0.5px black;
+}
+
+div.combat {
+  border: 1px solid solid;
+  background-image: url("../img/fight_orb.png");
+  background-size: 40px 40px;
+  padding: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: black;
+  -webkit-text-stroke: 0.4px white;
+}
+
+div.head textarea {
+  display: block;
+  border: 2px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-style: solid none solid none;
+  height: 70px;
+  width: 80%;
+  margin-left: 50px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+div.rightHand {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+div.rightHand select {
+  display: block;
+}
+
+div.rightHand textarea {
+  display: block;
+  border: 2px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-style: solid none solid none;
+  height: 70px;
+  width: 100%;
+  text-align: center;
+}
+
+div.foot textarea {
+  display: block;
+  border: 2px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-style: solid none solid none;
+  height: 70px;
+  width: 80%;
+  margin-left: 50px;
+  margin-top: 70px;
+  text-align: center;
+}
+
+div.chest textarea {
+  display: block;
+  border: 2px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-style: solid none solid none;
+  height: 70px;
+  width: 40%;
+  margin-left: 160px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+div.hand2 textarea {
+  display: block;
+  border: 2px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-style: solid none solid none;
+  height: 70px;
+  width: 40%;
+  margin-left: 160px;
+  margin-top: 80px;
+  text-align: center;
+}
+
+div.shadow {
+  display: block;
+  margin-right: 230px;
+  margin-left: auto;
+  margin-bottom: 200px;
+  width: 230px;
+  height: 265px;
+  background-image: url(https://www.hebergeur-image.com/upload/87.89.182.68-5fa1e2c08cc4f.png) no-repeat;
+}
+
+img {
+  width: 260px;
+  height: 295px;
+}
+
+div.gold {
+  background-image: url(https://www.hebergeur-image.com/upload/87.89.182.68-5fa43144c9ebe.gif);
+  background-size: 80px 70px;
+  background-repeat: no-repeat;
+  margin-top: 60px;
+}
+
+div.gold input {
+  float: center;
+  margin-left: 20px;
+  margin-top: 70px;
+}
+
+div.sac {
+  margin-left: 60px;
+  margin-top: 60px;
+}
+
+div.sac textarea {
+  display: block;
+  border: none;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-style: solid none solid none;
+  height: 140px;
+  width: 90%;
+}
+
+div.skills {
+    margin-top: 70px;
+}
+
+div.skills input{
+  padding: 1px;
+  display: block;
+  border: 2px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-style: none none solid none;
+  margin-top: 20px;
+  width: 85%
+}
+
+div.attrait {
+  margin-right: 30px;
+  margin-left: 10px;
+  margin-top: 70px;
+}
+
+div.attrait input{
+  padding: 1px;
+  display: block;
+  border: 2px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-style: none none solid none;
+  margin-top: 20px;
+  width: 80%
+}
+
+
+
+
+/***** ROLL TEMPLATE FIGHT *****/
+/*
+.rolltemplate-fight {
+    background-image: url("http://i.imgur.com/BLb0XMU.jpg");
+    background-size: 100%;
+    padding: 2px;
+    width: 100%;
+}
+
+.rolltemplate-fight div.rolltemp{
+    background-image: url("http://i.imgur.com/BLb0XMU.jpg");
+    background-size: 100%;
+    padding: 2px;
+    width: 100%;
+}
+
+.rolltemplate-fight table {
+    background:url(https://www.hebergeur-image.com/upload/87.89.182.68-5fa3344bc428a.png) no-repeat;
+    background-position: right 10px top 30px;
+    padding: 2px;
+    width: 100%;
+    background-size: 70px 70px;
+}
+
+
+.rolltemplate-fight th {
+    color: rgb(126, 45, 64);
+    font-size: 1.2em;
+    font-variant: smfight-caps;
+    line-height: 30px;
+    text-align: center;
+    font-style bold;
+    background:url('http://i.imgur.com/BLb0XMU.jpg') no-repeat;
+    background-size: 100%;
+    border: solid solid solid solid;
+}
+
+.rolltemplate-fight .text {
+    font-weight: bold;
+    color: rgb(126, 45, 64);
+}
+
+.rolltemplate-fight td {
+    padding-left: 5px;
+    font-size: 13px;
+    line-height: 20px;
+    border: solid solid solid solid;
+}
+
+.rolltemplate-fight .inlinerollresult {
+    background-color: transparent;
+    color: #000000;
+    border: none;
+}
+
+.rolltemplate-fight .inlinerollresult.fullcrit {
+   color: #d60d0d;
+    border: none;
+}
+ 
+.rolltemplate-fight .inlinerollresult.fullfail {
+    color: #3FB315;
+    border: none;
+}
+
+
+/***** ROLL TEMPLATE STRENGHT *****/
+/*
+.rolltemplate-strenght {
+    background-image: url("http://i.imgur.com/BLb0XMU.jpg");
+    background-size: 100%;
+    padding: 2px;
+    width: 100%;
+}
+
+.rolltemplate-strenght div.rolltemp{
+    background-image: url("http://i.imgur.com/BLb0XMU.jpg");
+    background-size: 100%;
+    padding: 2px;
+    width: 100%;
+}
+
+.rolltemplate-strenght table {
+    background:url(https://www.hebergeur-image.com/upload/87.89.182.68-5fa26b0f19dcc.png) no-repeat;
+    background-position: right 10px top 30px;
+    padding: 2px;
+    width: 100%;
+    background-size: 60px 60px;
+}
+
+
+.rolltemplate-strenght th {
+    color: rgb(126, 45, 64);
+    font-size: 1.2em;
+    font-variant: smfight-caps;
+    line-height: 30px;
+    text-align: center;
+    font-style bold;
+    background:url('http://i.imgur.com/BLb0XMU.jpg') no-repeat;
+    background-size: 100%;
+    border: solid solid solid solid;
+}
+
+.rolltemplate-strenght .text {
+    font-weight: bold;
+    color: rgb(126, 45, 64);
+}
+
+.rolltemplate-strenght td {
+    padding-left: 5px;
+    font-size: 13px;
+    line-height: 20px;
+    border: solid solid solid solid;
+}
+
+.rolltemplate-strenght .inlinerollresult {
+    background-color: transparent;
+    color: #000000;
+    border: none;
+}
+
+.rolltemplate-strenght .inlinerollresult.fullcrit {
+   color: #d60d0d;
+    border: none;
+}
+ 
+.rolltemplate-strenght .inlinerollresult.fullfail {
+    color: #3FB315;
+    border: none;
+}
+
+/***** ROLL TEMPLATE DEXTERITY *****/
+/*
+.rolltemplate-dexterity {
+    background-image: url("http://i.imgur.com/BLb0XMU.jpg");
+    background-size: 100%;
+    padding: 2px;
+    width: 100%;
+}
+
+.rolltemplate-dexterity div.rolltemp{
+    background-image: url("http://i.imgur.com/BLb0XMU.jpg");
+    background-size: 100%;
+    padding: 2px;
+    width: 100%;
+}
+
+.rolltemplate-dexterity table {
+    background:url(https://www.hebergeur-image.com/upload/87.89.182.68-5fa3344be3d4a.png) no-repeat;
+    background-position: right 10px top 30px;
+    padding: 2px;
+    width: 100%;
+    background-size: 60px 60px;
+}
+
+
+.rolltemplate-dexterity th {
+    color: rgb(126, 45, 64);
+    font-size: 1.2em;
+    font-variant: smfight-caps;
+    line-height: 30px;
+    text-align: center;
+    font-style bold;
+    background:url('http://i.imgur.com/BLb0XMU.jpg') no-repeat;
+    background-size: 100%;
+    border: solid solid solid solid;
+}
+
+.rolltemplate-dexterity .text {
+    font-weight: bold;
+    color: rgb(126, 45, 64);
+}
+
+.rolltemplate-dexterity td {
+    padding-left: 5px;
+    font-size: 13px;
+    line-height: 20px;
+    border: solid solid solid solid;
+}
+
+.rolltemplate-dexterity .inlinerollresult {
+    background-color: transparent;
+    color: #000000;
+    border: none;
+}
+
+.rolltemplate-dexterity .inlinerollresult.fullcrit {
+   color: #d60d0d;
+    border: none;
+}
+ 
+.rolltemplate-dexterity .inlinerollresult.fullfail {
+    color: #3FB315;
+    border: none;
+}
+
+/***** ROLL TEMPLATE MENTAL *****/
+/*
+.rolltemplate-mental {
+    background-image: url("http://i.imgur.com/BLb0XMU.jpg");
+    background-size: 100%;
+    padding: 2px;
+    width: 100%;
+}
+
+.rolltemplate-mental div.rolltemp{
+    background-image: url("http://i.imgur.com/BLb0XMU.jpg");
+    background-size: 100%;
+    padding: 2px;
+    width: 100%;
+}
+
+.rolltemplate-mental table {
+    background:url(https://www.hebergeur-image.com/upload/87.89.182.68-5fa3344be56e0.png) no-repeat;
+    background-position: right 10px top 30px;
+    padding: 2px;
+    width: 100%;
+    background-size: 60px 60px;
+}
+
+
+.rolltemplate-mental th {
+    color: rgb(126, 45, 64);
+    font-size: 1.2em;
+    font-variant: smfight-caps;
+    line-height: 30px;
+    text-align: center;
+    font-style bold;
+    background:url('http://i.imgur.com/BLb0XMU.jpg') no-repeat;
+    background-size: 100%;
+    border: solid solid solid solid;
+}
+
+.rolltemplate-mental .text {
+    font-weight: bold;
+    color: rgb(126, 45, 64);
+}
+
+.rolltemplate-mental td {
+    padding-left: 5px;
+    font-size: 13px;
+    line-height: 20px;
+    border: solid solid solid solid;
+}
+
+.rolltemplate-mental .inlinerollresult {
+    background-color: transparent;
+    color: #000000;
+    border: none;
+}
+
+.rolltemplate-mental .inlinerollresult.fullcrit {
+   color: #d60d0d;
+    border: none;
+}
+ 
+.rolltemplate-mental .inlinerollresult.fullfail {
+    color: #3FB315;
+    border: none;
+}
+
+
+/***** ROLL TEMPLATE MIND *****/
+/*
+.rolltemplate-mindness {
+    background-image: url("http://i.imgur.com/BLb0XMU.jpg");
+    background-size: 100%;
+    padding: 2px;
+    width: 100%;
+}
+
+.rolltemplate-mindness div.rolltemp{
+    background-image: url("http://i.imgur.com/BLb0XMU.jpg");
+    background-size: 100%;
+    padding: 2px;
+    width: 100%;
+}
+
+.rolltemplate-mindness table {
+    background:url(https://www.hebergeur-image.com/upload/87.89.182.68-5fa3344be6a37.png) no-repeat;
+    background-position: right 10px top 30px;
+    padding: 2px;
+    width: 100%;
+    background-size: 60px 60px;
+}
+
+
+.rolltemplate-mindness th {
+    color: rgb(126, 45, 64);
+    font-size: 1.2em;
+    font-variant: smfight-caps;
+    line-height: 30px;
+    text-align: center;
+    font-style bold;
+    background:url('http://i.imgur.com/BLb0XMU.jpg') no-repeat;
+    background-size: 100%;
+    border: solid solid solid solid;
+}
+
+.rolltemplate-mindness .text {
+    font-weight: bold;
+    color: rgb(126, 45, 64);
+}
+
+.rolltemplate-mindness td {
+    padding-left: 5px;
+    font-size: 13px;
+    line-height: 20px;
+    border: solid solid solid solid;
+}
+
+.rolltemplate-mindness .inlinerollresult {
+    background-color: transparent;
+    color: #000000;
+    border: none;
+}
+
+.rolltemplate-mindness .inlinerollresult.fullcrit {
+   color: #d60d0d;
+    border: none;
+}
+ 
+.rolltemplate-mindness .inlinerollresult.fullfail {
+    color: #3FB315;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
